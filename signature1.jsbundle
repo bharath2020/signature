@@ -47780,7 +47780,7 @@ var SignatureComponent = function (_Component) {
                         }
                     },
                     _react2.default.createElement(
-                        _reactNative.TouchableHighlight,
+                        _reactNative.TouchableOpacity,
                         { style: styles.buttonStyle,
                             onPress: function onPress() {
                                 _this2.saveSign();
@@ -47801,7 +47801,7 @@ var SignatureComponent = function (_Component) {
                         )
                     ),
                     _react2.default.createElement(
-                        _reactNative.TouchableHighlight,
+                        _reactNative.TouchableOpacity,
                         { style: styles.buttonStyle,
                             onPress: function onPress() {
                                 _this2.resetSign();
@@ -47828,9 +47828,9 @@ var SignatureComponent = function (_Component) {
         key: '_onSaveEvent',
         value: function _onSaveEvent(result) {
 
-            var file = "file://" + result["pathName"];
-            console.log("file url " + file);
-            Stride.sendMessage({ "imageURL": file });
+            console.log(result);
+
+            Stride.sendMessage({ "imageURL": result["pathName"] });
         }
     }, {
         key: '_onDragEvent',
